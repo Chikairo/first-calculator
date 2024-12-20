@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Project Calculator</title>
+  
+  <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+  <header>
+      Calculator
+    </header>
+  <div class="box">
+    <div class="display">
+      <h1>0</h1>
+    </div>
+    
+    <div class="row">
+      <button onclick="
+        calculation += '1';
+        console.log(calculation);
+        showCalculations();">1</button>
+      <button onclick="
+        calculation += '2';
+        console.log(calculation);
+        showCalculations();">2</button>
+      <button onclick="
+        calculation += '3';
+        console.log(calculation);
+        showCalculations();">3</button>
+      <button onclick="
+        calculation += ' + ';
+        console.log(calculation);
+        showCalculations();"
+        class="operators">+</button>
+    </div>
+      
+    <div class="row">
+      <button onclick="
+        calculation += '4';
+        console.log(calculation);
+        showCalculations();">4</button>
+      <button onclick="
+        calculation += '5';
+        console.log(calculation);
+        showCalculations();">5</button>
+      <button onclick="
+        calculation += '6';
+        console.log(calculation);
+        showCalculations();">6</button>
+      <button onclick="
+        calculation += ' - ';
+        console.log(calculation);
+        showCalculations();"
+        class="operators">-</button>
+    </div>
+    
+     <div class="row">
+      <button onclick="
+        calculation += '7';
+        console.log(calculation);
+        showCalculations();">7</button>
+      <button onclick="
+        calculation += '8';
+        console.log(calculation)
+        showCalculations();;">8</button>
+      <button onclick="
+        calculation += '9';
+        console.log(calculation);
+        showCalculations();">9</button>
+      <button onclick="
+        calculation += ' / ';
+        console.log(calculation);
+        showCalculations();"
+        class="operators">/</button>
+    </div>
+    
+     <div class="row">
+       <button onclick="
+        calculation = '0';
+        console.log(calculation)
+         showCalculations();"
+         class="reset";>reset</button>
+       <button onclick="
+        calculation += '0';
+        console.log(calculation);
+         showCalculations();">0</button>
+       <button onclick="
+        eval(calculation);
+        calculation = eval(calculation);
+        console.log(calculation);
+         showCalculations();"
+         class="calculate">=</button>
+       <button onclick="
+        calculation += ' * ';
+        console.log(calculation);
+         showCalculations();"
+         class="operators">*</button>
+    </div>
+  </div>
+  
+  <script>
+  let calculation = "";
+  
+  function showCalculations () {
+        let h1 = document.querySelector("h1");
+        h1.innerHTML = "" + calculation;
+       };
+  
+  </script>
+</body>
+</html>
